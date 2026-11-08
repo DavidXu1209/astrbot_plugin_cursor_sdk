@@ -1,0 +1,31 @@
+{
+  "id": {
+    "description": "提供商源 ID。在 AstrBot「服务提供商」页面新建本类型提供商时填写，AstrBot 用「提供商ID/模型ID」引用它。",
+    "type": "string",
+    "default": "cursor_sdk_text",
+    "hint": "本插件的参数都在「服务提供商」页面生效；本文件用于后台展示字段名与默认值，插件不读取「插件配置」页中的值。"
+  },
+  "enable": {
+    "description": "是否启用该提供商。",
+    "type": "bool",
+    "default": true
+  },
+  "key": {
+    "description": "Cursor 用户 API Key。填字符串或字符串列表，代码只取第一个。",
+    "type": "list",
+    "default": [],
+    "hint": "插件不内置任何 Key，也不会通过环境变量回退（SDK 启动参数 allow_api_key_env_fallback=False），必须在此字段填写；不要把它填到其他厂商的 API 配置里。"
+  },
+  "model": {
+    "description": "模型 ID，默认 auto；也可以写成「模型ID@参数=值,参数=值」给模型固定参数。",
+    "type": "string",
+    "default": "auto",
+    "hint": "插件不会查询账号模型目录，「获取模型列表」只返回这里配置的值；账号可用的模型以 Cursor 官方目录为准。"
+  },
+  "timeout": {
+    "description": "单次请求超时时间，单位秒。",
+    "type": "int",
+    "default": 120,
+    "hint": "允许范围 1–600 秒；超时后本插件不会自动重发。"
+  }
+}

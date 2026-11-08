@@ -1,0 +1,17 @@
+name: astrbot_plugin_cursor_sdk
+display_name: Cursor SDK 纯文本提供商
+desc: |
+  把 Cursor 官方 Python SDK（cursor-sdk）包装成 AstrBot 的纯文本模型提供商，
+  可作为聊天、上下文压缩、记忆总结等场景的备用模型通道。
+  只支持纯文本：不提供工具调用、多模态输入和 embedding；需要 Cursor 用户 API Key。
+version: 0.1.0
+author: David Xu
+repo: https://github.com/DavidXu1209/astrbot_plugin_cursor_sdk
+astrbot_version: ">=4.16.0"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 文本模型
+  - 模型提供商
+  - Cursor
+  - 备用模型
